@@ -13,13 +13,14 @@ let nombreDeUsuario = id("Nombre-de-Usuario"),
 
 formulario.addEventListener("submit", (e) => {
   e.preventDefault();
+  
   let motor = (id, serial, mensaje) => {
     
     if (id.value.trim() === "") {
       msjError[serial].innerHTML = mensaje;
       id.style.border = "2px solid red";
 
-      // iconos
+      // íconos
       failureIcon[serial].style.opacity = "1";
       successIcon[serial].style.opacity = "0";
     } 
@@ -28,7 +29,7 @@ formulario.addEventListener("submit", (e) => {
       msjError[serial].innerHTML = "";
       id.style.border = "2px solid green";
         
-      // iconos
+      // íconos
       failureIcon[serial].style.opacity = "0";
       successIcon[serial].style.opacity = "1";
     }
